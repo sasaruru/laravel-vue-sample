@@ -11,8 +11,12 @@
 import Vue from 'vue'
 // ルーティングの定義をインポートする
 import router from './router'
+
+import store from './store'
 // ルートコンポーネントをインポートする
 import App from './App.vue'
+
+import './bootstrap'
 
 /**
  * The following block of code may be used to automatically register your
@@ -36,6 +40,7 @@ import App from './App.vue'
 const app = new Vue({
     el: '#app',
     router, // ルーティングの定義を読み込む
+    store,
     components: { App }, // ルートコンポーネントの使用を宣言する
     template: '<App />' // ルートコンポーネントを描画する
 });

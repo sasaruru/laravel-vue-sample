@@ -37,6 +37,10 @@ import './bootstrap'
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+const createApp = async() => {
+    await store.dispatch('auth/currentUser');
+}
+
 const app = new Vue({
     el: '#app',
     router, // ルーティングの定義を読み込む
@@ -44,3 +48,5 @@ const app = new Vue({
     components: { App }, // ルートコンポーネントの使用を宣言する
     template: '<App />' // ルートコンポーネントを描画する
 });
+
+createApp();
